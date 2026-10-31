@@ -1,0 +1,46 @@
+/* 官网内嵌模式：只保留可操作的手机原型，隐藏方案说明页其它内容 */
+html,
+body {
+  background: transparent !important;
+  min-height: 0 !important;
+  overflow: hidden;
+}
+
+.ambient,
+.grain,
+.page-nav,
+.page-head,
+.specs,
+.stage-hint {
+  display: none !important;
+}
+
+.layout {
+  display: block;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.stage {
+  display: block;
+}
+.stage-sticky {
+  position: static;
+  padding-top: 22px;
+  transform: none !important;
+}
+
+.phone-shell {
+  margin: 0 auto !important;
+  transform: none !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04) !important;
+}
+
+@media (max-width: 720px) {
+  .phone-shell {
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+}

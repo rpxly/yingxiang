@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印象 · 为每张照片装裱成作品</title>
+<meta name="description" content="印象是一款相机参数边框 App。自动读取 EXIF，把机型、镜头、光圈、快门写进画面；8 个大师级版式，把每张照片装裱成一幅作品。">
+<meta name="theme-color" content="#F3F0E9">
+<meta property="og:title" content="印象 · 为每张照片装裱成作品">
+<meta property="og:description" content="自动读取 EXIF，8 个大师级版式，把手机照片装裱成有出处的作品。">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/app-icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/NotoSerifSC-Medium.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="assets/fonts/NotoSansSC-Regular.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="印象首页">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <g fill="none" stroke="currentColor" stroke-width="1.1">
+          <path d="M24 6.5 37.2 15 24 23.5 10.8 15Z"/>
+          <path d="M37.2 15v18L24 41.5 24 23.5Z"/>
+          <path d="M10.8 15 24 41.5 10.8 33Z"/>
+        </g>
+        <circle cx="24" cy="24" r="3.6" fill="currentColor"/>
+      </svg>
+      <span class="brand-text">印象<span class="brand-en mono">IMPRESSION</span></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#layouts"><span class="mono">01</span>版式</a>
+      <a href="#features"><span class="mono">02</span>功能</a>
+      <a href="#brands"><span class="mono">03</span>相机</a>
+      <a href="#download"><span class="mono">04</span>下载</a>
+    </nav>
+    <button class="nav-cta" type="button" data-download>
+      <span>获取 App</span>
+      <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow mono" data-reveal>IMPRESSION — VOL.01 / 相机参数边框</p>
+        <h1 data-reveal>为每张照片<br>装裱一幅<span class="accent">作品<svg viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 C 82 4, 222 18, 316 7"/></svg></span></h1>
+        <p class="hero-lede" data-reveal>自动读取 EXIF，填入机型、镜头、光圈与快门。8 个大师级版式，把手机里的照片，装裱成一幅有出处的作品。</p>
+        <div class="hero-actions" data-reveal>
+          <button class="btn btn-primary" type="button" data-download>
+            获取 App
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M5.5 3H13v7.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+          </button>
+          <a class="btn btn-ghost" href="#layouts">浏览 8 个版式 <span class="arr">↓</span></a>
+        </div>
+        <div class="hero-stats" data-reveal>
+          <span><b>08</b><em>大师版式</em></span>
+          <span><b>32</b><em>品牌组合</em></span>
+          <span><b>6000</b><em>PX 长边</em></span>
+          <span><b>0</b><em>画质损失</em></span>
+        </div>
+      </div>
+
+      <div class="hero-art" data-reveal>
+        <div class="art-stage">
+          <span class="art-note mono">PLATE 01 / 08</span>
+          <span class="art-axis art-axis-x mono">EXIF → CANVAS</span>
+
+          <figure class="hero-print">
+            <div class="hero-print-mat">
+              <img src="assets/img/photo-01-mist.jpg" alt="雾中山景与孤松，配米白装裱边框" fetchpriority="high">
+              <div class="hero-wm">
+                <p class="wm-title">雾中来客</p>
+                <p class="wm-gear">HASSELBLAD 503CXI</p>
+                <p class="wm-exif">f/2.8 · 1/250s · ISO 100</p>
+              </div>
+            </div>
+          </figure>
+
+          <div class="prototype-phone">
+            <iframe src="prototype/index.html" title="印象 App 原型 · 可直接操作"></iframe>
+          </div>
+
+          <figure class="hero-polaroid">
+            <img src="assets/img/photo-05-camera.jpg" alt="窗边的胶片相机与干花" loading="lazy">
+            <figcaption>Leica M6 · 35mm</figcaption>
+          </figure>
+        </div>
+        <p class="prototype-hint mono"><span></span>原型可直接操作 · 点叠卡 / 切页签 / 拨光圈</p>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="hero-ticker mono" aria-hidden="true">
+        <span>HASSELBLAD · PORTRA 400 · 80MM · ISO 100 · f/2.8 · 1/250s · KODAK · ROLLEI · ZEISS ·</span>
+        <span>HASSELBLAD · PORTRA 400 · 80MM · ISO 100 · f/2.8 · 1/250s · KODAK · ROLLEI · ZEISS ·</span>
+      </div>
+      <a class="scroll-cue mono" href="#manifesto"><i></i>向下显影</a>
+    </div>
+  </section>
+
+  <!-- ============================== MANIFESTO ============================== -->
+  <section class="manifesto" id="manifesto">
+    <span class="ghost-num" aria-hidden="true">01</span>
+    <div class="manifesto-inner">
+      <div class="manifesto-left" data-reveal>
+        <p class="eyebrow mono light">01 — MANIFESTO</p>
+        <h2>照片不需要滤镜，<br><em>它需要一次装裱。</em></h2>
+        <div class="manifesto-tags">
+          <span class="mono">不修图</span>
+          <span class="mono">不换色</span>
+          <span class="mono">不裁构图</span>
+        </div>
+      </div>
+      <div class="manifesto-right" data-reveal>
+        <p>一张照片真正的完成，不是在按下快门的那一刻，而是在它被打印、被装裱、被认真看的时候。</p>
+        <p>印象只做一件事：把品牌、镜头、光圈、快门这些正在消失的拍摄信息，重新排进画面里。让手机里的照片，成为一件被认真装裱的作品。</p>
+        <p class="manifesto-sign mono">SHOOT / FRAME / KEEP</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== LAYOUTS ============================== -->
+  <section class="layouts" id="layouts">
+    <div class="section-head">
+      <div data-reveal>
+        <p class="eyebrow mono">02 — CONTACT SHEET</p>
+        <h2>八种版式，<br>一次装裱。</h2>
+      </div>
+      <div class="section-head-side" data-reveal>
+        <p>从装裱、杂志到暗房，三种族系、八张版面。所有尺寸按比例计算，同一版式在 4000px 与 12000px 的图上完全等比。</p>
+        <div class="filter-row" role="group" aria-label="按版式族系筛选">
+          <button class="filter is-on" type="button" data-filter="all">全部 <span class="mono">08</span></button>
+          <button class="filter" type="button" data-filter="mat">装裱 <span class="mono">04</span></button>
+          <button class="filter" type="button" data-filter="mag">杂志 <span class="mono">03</span></button>
+          <button class="filter" type="button" data-filter="dark">暗房 <span class="mono">01</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-grid" id="layoutGrid">
+
+      <article class="layout-card" data-family="mat" data-reveal>
+        <div class="frame f-mat">
+          <div class="f-mat-photo"><img src="assets/img/photo-01-mist.jpg" alt="米白装裱版式预览" loading="lazy"></div>
+          <div class="f-mat-wm">
+            <span class="f-t">雾中来客</span>
+            <span class="f-g">HASSELBLAD 503CXI · CF 80MM</span>
+            <span class="f-e">f/2.8　1/250s　ISO 100　·　2026</span>
+          </div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">01</span>
+          <div class="layout-name"><h3>米白装裱</h3><p>艺术框裱 · 底边留白 1.5 倍</p></div>
+          <span class="layout-tag mono">FLOW</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="mat" data-reveal>
+        <div class="frame f-gallery">
+          <div class="f-gallery-frame">
+            <div class="f-gallery-mat"><img src="assets/img/photo-05-camera.jpg" alt="画廊双框版式预览" loading="lazy"></div>
+            <div class="f-gallery-wm">
+              <span class="f-g">R O L L E I</span>
+              <span class="f-e">2.8 F · PLANAR 80MM</span>
+              <span class="f-e dim">f/2.8　1/125s　ISO 400 · PORTRA 400</span>
+            </div>
+          </div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">02</span>
+          <div class="layout-name"><h3>画廊双框</h3><p>艺术框裱 · 暗框白衬 4:5</p></div>
+          <span class="layout-tag mono">FIXED</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="mag" data-reveal>
+        <div class="frame f-editorial">
+          <div class="f-ed-head"><span>HASSELBLAD</span><span>VOL.04 / 2026</span></div>
+          <div class="f-ed-rule"></div>
+          <div class="f-ed-photo"><img src="assets/img/photo-04-dunes.jpg" alt="杂志大刊版式预览" loading="lazy"></div>
+          <div class="f-ed-num">No.04</div>
+          <div class="f-ed-sub">沙丘的静默叙事</div>
+          <div class="f-ed-rule second"></div>
+          <div class="f-ed-exif">503CXI · CF80MM · f/2.8 · 1/250s · ISO100</div>
+          <div class="f-ed-foot"><span>STOCKHOLM · 59°N</span><span>02 — 12</span></div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">03</span>
+          <div class="layout-name"><h3>杂志大刊</h3><p>杂志感 · 期刊骨架 4:5</p></div>
+          <span class="layout-tag mono">FIXED</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="mag" data-reveal>
+        <div class="frame f-sidebar">
+          <div class="f-side-title">胶片里的光</div>
+          <div class="f-side-photo"><img src="assets/img/photo-03-portrait.jpg" alt="竖栏杂志版式预览" loading="lazy"></div>
+          <div class="f-side-num">04</div>
+          <div class="f-side-meta"><span>LEICA / M6</span><span>SUMMICRON 35MM · f/2</span></div>
+          <div class="f-side-date">2026 / 10</div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">04</span>
+          <div class="layout-name"><h3>竖栏杂志</h3><p>杂志感 · 竖排标题 4:5</p></div>
+          <span class="layout-tag mono">FIXED</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="mat" data-reveal>
+        <div class="frame f-polaroid">
+          <div class="f-pol-card">
+            <div class="f-pol-photo"><img src="assets/img/photo-05-camera.jpg" alt="拍立得留白版式预览" loading="lazy"></div>
+            <div class="f-pol-script">Rolleiflex 2.8F</div>
+            <div class="f-pol-meta">PORTRA 400 · f/2.8 · 1/125 · 2026.10.31</div>
+            <div class="f-pol-no">NO. 12 / 24</div>
+          </div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">05</span>
+          <div class="layout-name"><h3>拍立得留白</h3><p>艺术框裱 · 手写署名 4:5</p></div>
+          <span class="layout-tag mono">FIXED</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="dark" data-reveal>
+        <div class="frame f-dark">
+          <div class="f-dark-photo"><img src="assets/img/photo-02-rain.jpg" alt="暗房黑底版式预览" loading="lazy"></div>
+          <div class="f-dark-rule"></div>
+          <div class="f-dark-wm">
+            <span class="f-dark-brand">H A S S E L B L A D</span>
+            <span class="f-dark-gear">503CXI + CF80MM</span>
+            <div class="f-dark-exif"><span>f/2.8　1/250　ISO100　80MM</span><span class="mint">2026.10.31</span></div>
+          </div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">06</span>
+          <div class="layout-name"><h3>暗房黑底</h3><p>暗房 · 纯黑底等宽排参</p></div>
+          <span class="layout-tag mono">FLOW</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="mat" data-reveal>
+        <div class="frame f-museum">
+          <div class="f-mus-photo"><img src="assets/img/photo-04-dunes.jpg" alt="展签卡版式预览" loading="lazy"></div>
+          <div class="f-mus-label">
+            <span class="title">《沙丘 · 2026》</span>
+            <span class="meta">银盐工艺 / 中画幅 / 单张</span>
+            <span class="meta dim">哈苏 503CXI · CF 80mm · f/2.8 · 1/250s</span>
+          </div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">07</span>
+          <div class="layout-name"><h3>展签卡</h3><p>艺术框裱 · 美术馆展签</p></div>
+          <span class="layout-tag mono">FLOW</span>
+        </div>
+      </article>
+
+      <article class="layout-card" data-family="mag" data-reveal>
+        <div class="frame f-split">
+          <div class="f-split-brand">FIELD</div>
+          <div class="f-split-rule"></div>
+          <div class="f-split-title">胶片里的光</div>
+          <div class="f-split-exif">f/2.8 · 1/250s · ISO100</div>
+          <div class="f-split-photo"><img src="assets/img/photo-03-portrait.jpg" alt="对开分栏版式预览" loading="lazy"></div>
+          <div class="f-split-foot">ISSUE 04 / 2026</div>
+        </div>
+        <div class="layout-meta">
+          <span class="layout-num mono">08</span>
+          <div class="layout-name"><h3>对开分栏</h3><p>杂志感 · 图出血右侧 4:5</p></div>
+          <span class="layout-tag mono">FIXED</span>
+        </div>
+      </article>
+
+    </div>
+    <div class="layouts-foot" data-reveal>
+      <span class="mono">8 LAYOUTS × 4 BRANDS = 32 LOOKS</span>
+      <span class="mono">1240 × 1550 / TRUE PROPORTION</span>
+    </div>
+  </section>
+
+  <!-- ============================== FEATURES ============================== -->
+  <section class="features" id="features">
+    <div class="features-inner">
+      <div class="section-head features-head">
+        <div data-reveal>
+          <p class="eyebrow mono">03 — THE DETAILS</p>
+          <h2>不写字，<br>也能有原厂感。</h2>
+        </div>
+        <div class="section-head-side" data-reveal>
+          <p>边框的高级感不在花哨，而在克制。参数从 EXIF 自动填入，空字段连同分隔符一起收掉，导出的每一像素都与原图一致。</p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature" data-reveal>
+          <svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="1"/>
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M24 5 35.7 12.5 24 20 12.3 12.5Z"/>
+              <path d="M35.7 12.5v17L24 37 24 20Z"/>
+              <path d="M12.3 12.5 24 37 12.3 29.5Z"/>
+            </g>
+            <circle cx="24" cy="24" r="3" fill="currentColor"/>
+          </svg>
+          <p class="feature-k mono">01 / EXIF</p>
+          <h3>参数自己会写。</h3>
+          <p>导入照片即刻读取机型、镜头、光圈、快门、ISO、焦距与日期。手机联名也认得出：小米自动映射 Leica，vivo 映射 ZEISS，OPPO 映射 HASSELBLAD。</p>
+        </article>
+
+        <article class="feature" data-reveal>
+          <svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M7 16h34M7 24h20M7 32h12" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            <circle cx="34.5" cy="24" r="2.2" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M28 33 42 15" fill="none" stroke="currentColor" stroke-width="1"/>
+          </svg>
+          <p class="feature-k mono">02 / CLEAN</p>
+          <h3>没有脏字符。</h3>
+          <p>镜头缺失时，不会留下「f/2.8 · · ISO100」这种残句。空字段连同分隔符整段删除，每一行都保持完整、干净。</p>
+        </article>
+
+        <article class="feature" data-reveal>
+          <svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="8" y="8" width="27" height="32" rx="1.5" fill="none" stroke="currentColor" stroke-width="1"/>
+            <rect x="14" y="8" width="26" height="32" rx="1.5" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M27 24h14M36 19l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.1"/>
+          </svg>
+          <p class="feature-k mono">03 / LOSSLESS</p>
+          <h3>原图，原样。</h3>
+          <p>按原图像素重建画布，长边最高 6000px。JPG / PNG / HEIC / PDF 四种格式，支持批量串行导出，分辨率与预览完全一致。</p>
+        </article>
+      </div>
+
+      <div class="features-note" data-reveal>
+        <span class="mono">TECH NOTE</span>
+        <p>所有几何值都以画布宽度的比例定义，同一份模板在 4000px 与 12000px 的图上完全等比。换一张照片，版式不会走形。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== BRANDS ============================== -->
+  <section class="brands" id="brands">
+    <div class="brands-inner">
+      <div class="section-head brands-head">
+        <div data-reveal>
+          <p class="eyebrow mono">04 — CAMERA DNA</p>
+          <h2>EXIF 认得出，<br>你用什么拍的。</h2>
+        </div>
+        <div class="section-head-side" data-reveal>
+          <p>已内置 22 个相机品牌与 5 个胶片品牌。写过「NIKON CORPORATION」「LEICA CAMERA AG」还是「samsung」，都能归一化匹配到同一个名字。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="brand-marquee" aria-hidden="true">
+      <div class="brand-track">
+        <span>LEICA</span><i></i><span>HASSELBLAD</span><i></i><span>ZEISS</span><i></i><span>ROLLEI</span><i></i><span>KODAK</span><i></i><span>FUJIFILM</span><i></i><span>RICOH GR</span><i></i><span>HARCOURT</span><i></i><span>XMAGE</span><i></i><span>PENTAX</span><i></i>
+        <span>LEICA</span><i></i><span>HASSELBLAD</span><i></i><span>ZEISS</span><i></i><span>ROLLEI</span><i></i><span>KODAK</span><i></i><span>FUJIFILM</span><i></i><span>RICOH GR</span><i></i><span>HARCOURT</span><i></i><span>XMAGE</span><i></i><span>PENTAX</span><i></i>
+      </div>
+    </div>
+
+    <div class="brands-inner">
+      <div class="brand-notes">
+        <div class="brand-note" data-reveal>
+          <span class="mono">22</span>
+          <h3>相机品牌</h3>
+          <p>Nikon、Canon、Sony、Leica、Hasselblad、Fujifilm、Pentax、Rollei、Phase One 等。</p>
+        </div>
+        <div class="brand-note" data-reveal>
+          <span class="mono">05</span>
+          <h3>胶片品牌</h3>
+          <p>禄来、林哈夫、乐凯、上海 GP3、碧浪。连胶片模拟也能写进边框。</p>
+        </div>
+        <div class="brand-note" data-reveal>
+          <span class="mono">12</span>
+          <h3>手机联名</h3>
+          <p>小米 / Redmi → LEICA，vivo / iQOO → ZEISS，OPPO / 一加 → HASSELBLAD，荣耀 → HARCOURT，华为 → XMAGE。</p>
+        </div>
+      </div>
+      <p class="brand-disclaimer mono" data-reveal>品牌名称仅用于 EXIF 识别与水印文字排版，相关商标归各自所有者所有。</p>
+    </div>
+  </section>
+
+  <!-- ============================== DEVELOP / LIVE DEMO ============================== -->
+  <section class="develop" id="develop">
+    <div class="develop-inner">
+      <div class="develop-copy" data-reveal>
+        <p class="eyebrow mono light">05 — DEVELOP TABLE</p>
+        <h2>改一个字，<br><em>预览立刻显影。</em></h2>
+        <p class="develop-lede">版式、标题、参数都可以实时切换。下面这一张，就是你手机里的下一张照片。</p>
+
+        <div class="demo-controls">
+          <div class="control-group">
+            <span class="control-label mono">PHOTO / 选片</span>
+            <div class="thumb-row" id="photoThumbs" role="group" aria-label="选择演示照片">
+              <button class="thumb is-on" type="button" data-photo="mist" aria-label="雾中孤松" aria-pressed="true">
+                <img src="assets/img/photo-01-mist.jpg" alt="">
+              </button>
+              <button class="thumb" type="button" data-photo="dunes" aria-label="黄昏沙丘" aria-pressed="false">
+                <img src="assets/img/photo-04-dunes.jpg" alt="">
+              </button>
+              <button class="thumb" type="button" data-photo="portrait" aria-label="午后逆光人像" aria-pressed="false">
+                <img src="assets/img/photo-03-portrait.jpg" alt="">
+              </button>
+              <button class="thumb" type="button" data-photo="camera" aria-label="窗边相机静物" aria-pressed="false">
+                <img src="assets/img/photo-05-camera.jpg" alt="">
+              </button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <span class="control-label mono">LAYOUT / 版式</span>
+            <div class="seg-row" id="layoutSeg" role="group" aria-label="选择演示版式">
+              <button class="seg is-on" type="button" data-layout="mat" aria-pressed="true">米白装裱</button>
+              <button class="seg" type="button" data-layout="mag" aria-pressed="false">杂志大刊</button>
+              <button class="seg" type="button" data-layout="polaroid" aria-pressed="false">拍立得</button>
+              <button class="seg" type="button" data-layout="dark" aria-pressed="false">暗房</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label mono" for="captionInput">CAPTION / 标题</label>
+            <div class="caption-field">
+              <input id="captionInput" type="text" maxlength="18" value="雾中来客" autocomplete="off" spellcheck="false">
+              <span class="mono" id="captionCount">4 / 18</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <span class="control-label mono">FIELDS / 字段</span>
+            <div class="toggle-row" id="fieldToggles" role="group" aria-label="显示或隐藏水印字段">
+              <button class="toggle is-on" type="button" data-field="model" aria-pressed="true">机型</button>
+              <button class="toggle is-on" type="button" data-field="lens" aria-pressed="true">镜头</button>
+              <button class="toggle is-on" type="button" data-field="aperture" aria-pressed="true">光圈</button>
+              <button class="toggle is-on" type="button" data-field="shutter" aria-pressed="true">快门</button>
+              <button class="toggle is-on" type="button" data-field="iso" aria-pressed="true">ISO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="develop-stage" data-reveal>
+        <div class="stage-halo" aria-hidden="true"></div>
+        <div class="demo-frame is-mat" id="demoFrame">
+          <div class="demo-mag-head" id="demoMagHead"><span>HASSELBLAD</span><span>VOL.04 / 2026</span></div>
+          <div class="demo-photo-wrap"><img class="demo-photo" id="demoPhoto" src="assets/img/photo-01-mist.jpg" alt="实时预览照片"></div>
+          <div class="demo-mag-num" id="demoMagNum">No.04</div>
+          <div class="demo-script" id="demoScript">Rolleiflex 2.8F</div>
+          <div class="demo-wm" id="demoWm">
+            <span class="d-title" id="dTitle">雾中来客</span>
+            <span class="d-gear" id="dGear">HASSELBLAD 503CXI · CF 80MM</span>
+            <span class="d-exif" id="dExif">f/2.8　1/250s　ISO 100　·　2026</span>
+          </div>
+        </div>
+        <div class="stage-caption">
+          <span class="mono" id="demoSpec">MAT WARM · 1240 × 1550</span>
+          <span class="mono live-dot"><i></i>LIVE PREVIEW</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== DOWNLOAD ============================== -->
+  <section class="download" id="download">
+    <div class="download-inner">
+      <div class="download-card" data-reveal>
+        <span class="download-ghost" aria-hidden="true">印</span>
+        <div class="app-lockup">
+          <img class="app-icon" src="assets/img/app-icon.svg" alt="印象 App 图标">
+          <div class="app-badge">
+            <span class="mono">IMPRESSION</span>
+            <b>相机参数边框</b>
+          </div>
+        </div>
+        <div class="download-copy">
+          <p class="eyebrow mono">GET IMPRESSION</p>
+          <h2>把相机，<br>装进相册。</h2>
+          <p>iOS / Android 双端内测中。上架后，这里会换成真正的下载入口。</p>
+        </div>
+        <div class="download-actions">
+          <button class="store-btn" type="button" data-download>
+            <span class="mono">iOS</span>
+            <b>App Store</b>
+            <em>即将上架</em>
+          </button>
+          <button class="store-btn" type="button" data-download>
+            <span class="mono">ANDROID</span>
+            <b>Google Play</b>
+            <em>内测招募中</em>
+          </button>
+        </div>
+        <div class="download-meta mono">
+          <span>8 LAYOUTS</span>
+          <span>4 BRANDS</span>
+          <span>32 LOOKS</span>
+          <span>6000PX</span>
+        </div>
+      </div>
+
+      <div class="download-foot" data-reveal>
+        <p>先看看版式，再决定要不要把相机装进相册。</p>
+        <a class="btn btn-ghost" href="#layouts">回到版式 <span class="arr">↑</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a class="brand foot-logo" href="#top" aria-label="回到顶部">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <g fill="none" stroke="currentColor" stroke-width="1.1">
+            <path d="M24 6.5 37.2 15 24 23.5 10.8 15Z"/>
+            <path d="M37.2 15v18L24 41.5 24 23.5Z"/>
+            <path d="M10.8 15 24 41.5 10.8 33Z"/>
+          </g>
+          <circle cx="24" cy="24" r="3.6" fill="currentColor"/>
+        </svg>
+        <span class="brand-text">印象<span class="brand-en mono">IMPRESSION</span></span>
+      </a>
+      <p>为每张照片装裱成作品。<br>不修图，不换色，只把拍摄的痕迹留下来。</p>
+    </div>
+
+    <nav class="foot-links" aria-label="页脚导航">
+      <div>
+        <span class="mono">版式</span>
+        <a href="#layouts">米白装裱</a>
+        <a href="#layouts">画廊双框</a>
+        <a href="#layouts">杂志大刊</a>
+        <a href="#layouts">暗房黑底</a>
+      </div>
+      <div>
+        <span class="mono">产品</span>
+        <a href="#features">EXIF 识别</a>
+        <a href="#features">无损导出</a>
+        <a href="#brands">品牌匹配</a>
+        <a href="#develop">实时预览</a>
+      </div>
+      <div>
+        <span class="mono">状态</span>
+        <span class="foot-status">双端内测中</span>
+        <span class="foot-status dim">iOS 15+ / Android 13+</span>
+        <span class="foot-status dim">2026 冬</span>
+      </div>
+    </nav>
+
+    <div class="foot-bottom">
+      <span class="mono">© 2026 印象 · 相机参数边框</span>
+      <span class="mono">DESIGNED IN THE DARKROOM</span>
+      <span class="mono">8 LAYOUTS / 04 BRANDS</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="download-dialog" id="downloadDialog" aria-labelledby="dlgTitle">
+  <button class="dlg-close" type="button" data-close aria-label="关闭">×</button>
+  <img class="dlg-icon" src="assets/img/app-icon.svg" alt="">
+  <p class="eyebrow mono">RELEASE / 2026 WINTER</p>
+  <h2 id="dlgTitle">双端内测中。</h2>
+  <p>这是印象的项目官网展示版。App Store 与 Google Play 的下载入口会在上架后开放，当前版本正在 iOS / Android 双端内测。</p>
+  <div class="dlg-actions">
+    <a class="btn btn-primary" href="#layouts" data-close>先看 8 个版式</a>
+    <button class="btn btn-ghost" type="button" data-close>知道了</button>
+  </div>
+</dialog>
+
+<script src="site.js"></script>
+</body>
+</html>

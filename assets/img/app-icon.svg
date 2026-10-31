@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- 背景渐变：暖黑到深青绿，呼应 app 深色主题 fieldTop -->
+    <radialGradient id="bgGlow" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#1F4A42"/>
+      <stop offset="45%" stop-color="#0E1F22"/>
+      <stop offset="100%" stop-color="#08090A"/>
+    </radialGradient>
+
+    <!-- 装裱纸渐变：暖米白，边缘略深，模拟纸张厚度 -->
+    <linearGradient id="matGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF9F3"/>
+      <stop offset="50%" stop-color="#F3F0E9"/>
+      <stop offset="100%" stop-color="#E7E0D0"/>
+    </linearGradient>
+
+    <!-- 装裱内阴影（开孔边缘） -->
+    <linearGradient id="matInnerShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.18"/>
+      <stop offset="30%" stop-color="#000000" stop-opacity="0.04"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.14"/>
+    </linearGradient>
+
+    <!-- 光圈渐变：青绿到深青绿 -->
+    <radialGradient id="apertureGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7FE0BF"/>
+      <stop offset="55%" stop-color="#5DCAA5"/>
+      <stop offset="100%" stop-color="#2E8B72"/>
+    </radialGradient>
+
+    <!-- 高光 -->
+    <linearGradient id="specular" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- 装裱外描边 -->
+    <linearGradient id="matStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C9C2B0" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- 暖琥珀微光（右上角点缀） -->
+    <radialGradient id="amberGlow" cx="72%" cy="28%" r="30%">
+      <stop offset="0%" stop-color="#E7B27C" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#E7B27C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景圆角矩形（iOS 图标形状，圆角 22.37% ≈ 229px） -->
+  <rect x="0" y="0" width="1024" height="1024" rx="229" ry="229" fill="url(#bgGlow)"/>
+
+  <!-- 右上角暖琥珀微光，呼应 app fieldGlowAlt -->
+  <rect x="0" y="0" width="1024" height="1024" rx="229" ry="229" fill="url(#amberGlow)"/>
+
+  <!-- 照片装裱框（暖米白厚边框） -->
+  <!-- 外框 -->
+  <rect x="178" y="178" width="668" height="668" rx="24" ry="24" fill="url(#matGrad)" stroke="url(#matStroke)" stroke-width="2"/>
+
+  <!-- 装裱开孔（露出深色背景，形成光圈所在区域） -->
+  <rect x="278" y="278" width="468" height="468" rx="6" ry="6" fill="#0A0C0B"/>
+
+  <!-- 开孔内阴影（上深下浅，模拟装裱纸厚度投影） -->
+  <rect x="278" y="278" width="468" height="468" rx="6" ry="6" fill="url(#matInnerShadow)"/>
+
+  <!-- 光圈（6 片叶片，青绿渐变） -->
+  <g transform="translate(512 512)">
+    <!-- 光圈叶片：6 片，每片旋转 60° -->
+    <g fill="url(#apertureGrad)">
+      <!-- 叶片 1 -->
+      <path d="M 0 -168 L 145 -84 L 0 0 Z"/>
+      <!-- 叶片 2 -->
+      <path d="M 0 -168 L 145 -84 L 0 0 Z" transform="rotate(60)"/>
+      <!-- 叶片 3 -->
+      <path d="M 0 -168 L 145 -84 L 0 0 Z" transform="rotate(120)"/>
+      <!-- 叶片 4 -->
+      <path d="M 0 -168 L 145 -84 L 0 0 Z" transform="rotate(180)"/>
+      <!-- 叶片 5 -->
+      <path d="M 0 -168 L 145 -84 L 0 0 Z" transform="rotate(240)"/>
+      <!-- 叶片 6 -->
+      <path d="M 0 -168 L 145 -84 L 0 0 Z" transform="rotate(300)"/>
+    </g>
+
+    <!-- 光圈中心圆孔（露出深色背景，形成镜头开口） -->
+    <circle cx="0" cy="0" r="58" fill="#050606"/>
+    <!-- 中心孔内的一点青绿反光 -->
+    <circle cx="-14" cy="-14" r="20" fill="#5DCAA5" opacity="0.18"/>
+
+    <!-- 光圈外圈细描边 -->
+    <circle cx="0" cy="0" r="172" fill="none" stroke="#5DCAA5" stroke-width="2.5" opacity="0.35"/>
+  </g>
+
+  <!-- 装裱纸顶部高光（模拟纸张上缘反光） -->
+  <rect x="178" y="178" width="668" height="100" rx="24" ry="24" fill="url(#specular)"/>
+  <!-- 裁掉高光超出圆角的部分（用 mask 更干净，这里用重叠裁切简化） -->
+
+  <!-- 整体顶部高光（玻璃质感） -->
+  <rect x="0" y="0" width="1024" height="512" rx="229" ry="229" fill="url(#specular)" opacity="0.12"/>
+
+</svg>
