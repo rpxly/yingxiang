@@ -257,36 +257,16 @@
     renderLayout();
   }
 
-  /* ---------------- download dialog ---------------- */
-  var dialog = document.getElementById("downloadDialog");
-  if (dialog && typeof dialog.showModal === "function") {
-    document.querySelectorAll("[data-download]").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        dialog.showModal();
-      });
+  /* ---------------- download ---------------- */
+  document.querySelectorAll("[data-download]").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var a = document.createElement("a");
+      a.href = "APK/impression.apk";
+      a.download = "impression.apk";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     });
-
-    document.querySelectorAll("[data-close]").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        if (btn.tagName === "A") {
-          dialog.close();
-          return;
-        }
-        e.preventDefault();
-        dialog.close();
-      });
-    });
-
-    dialog.addEventListener("click", function (e) {
-      if (e.target === dialog) dialog.close();
-    });
-  } else {
-    document.querySelectorAll("[data-download]").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.href = "#layouts";
-      });
-    });
-  }
+  });
 })();
