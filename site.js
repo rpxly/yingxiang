@@ -108,10 +108,10 @@
   };
 
   var layouts = {
-    mat: "MAT WARM · 1240 × 1550",
-    mag: "EDITORIAL NO · 1240 × 1550",
-    polaroid: "POLAROID · 1240 × 1550",
-    dark: "DARKROOM · 1240 × 1550"
+    mat: "WIDESCREEN · CINEMA MAT",
+    mag: "HEADSPACE · 16:9",
+    polaroid: "FILM NOTE · SCRIPT",
+    dark: "CINEBOX · DARK"
   };
 
   var demoFrame = document.getElementById("demoFrame");
